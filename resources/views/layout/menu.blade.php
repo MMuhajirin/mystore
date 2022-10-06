@@ -10,17 +10,16 @@
             <a class="nav-link active" aria-current="page" href="#">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Produk</a>
+            <a class="nav-link" href="{{ URL::to('produk')}}">Produk</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="{{ URL::to('about')}}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Kontak</a>
+            <a class="nav-link" href="{{ URL::to('kontak')}}">Kontak</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Kategori
+          <li class="nav-item">
+            <a class="nav-link" href="{{ URL::to('kategori')}}">Kategori</a>
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Baju</a></li>
