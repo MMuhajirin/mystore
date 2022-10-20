@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controller as RoutingController;
 use App\Http\Controllers\LatihanController;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +33,7 @@ Route::get('/homepage', [HomepageController::class, 'index']);
 Route::get('/about', [HomepageController::class, 'about']);
 Route::get('/kontak', [HomepageController::class, 'kontak']);
 Route::get('/kategori', [HomepageController::class, 'kategori']);
+Route::get('/admin', [DashboardController::class, 'index']);
+
 
 
