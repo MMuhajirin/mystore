@@ -27,6 +27,7 @@ Route::get('', function () {
     return view('homepage.index');
     });
 
+
 Route::get('/latihan', [LatihanController::class, 'home']);
 Route::get('/beranda', [LatihanController::class, 'beranda']);
 Route::get('/homepage', [HomepageController::class, 'index']);
@@ -35,5 +36,31 @@ Route::get('/kontak', [HomepageController::class, 'kontak']);
 Route::get('/kategori', [HomepageController::class, 'kategori']);
 Route::get('/admin', [DashboardController::class, 'index']);
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+// Route::prefix('mahasiswa')->group(function () {
 
+//     Route::get('pendaftaran', function () {
+//         $title = 'Pendaftaran';
+//         $text = 'Halaman Pendaftaran';
+
+//         return view('mahasiswa.index', compact('title', 'text'));
+//     });
+
+//     Route::get('ujian', function () {
+//         $title = 'ujian';
+//         $text = 'Halaman Ujian';
+
+//         return view('mahasiswa.index', compact('title', 'text'));
+//     });
+
+//     Route::get('nilai', function () {
+//         $title = 'Nilai';
+//         $text = 'Halaman Nilai';
+
+//         return view('mahasiswa.index', compact('title', 'text'));
+//     });
+
+// });
