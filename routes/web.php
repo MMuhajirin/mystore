@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controller as RoutingController;
 use App\Http\Controllers\LatihanController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DashboardController;
 
@@ -36,13 +37,26 @@ Route::get('/kontak', [HomepageController::class, 'kontak']);
 Route::get('/kategori', [HomepageController::class, 'kategori']);
 Route::get('/admin', [DashboardController::class, 'index']);
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-// Route::prefix('mahasiswa')->group(function () {
+// Route group admin
+Route::group(['prefix' => '/admin'], function (){
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.admin');
 
-//     Route::get('pendaftaran', function () {
+    //Route::group parent kategori
+        Route::group(['prefix' => '/kategori'], function (){
+            Route::get('/', [KategoriController::class, 'index'])->name('kategori.index');
+            Route::get('/create', [KategoriController::class, 'create'])->name('create.kategori');
+
+        });
+
+    Route::get('/transaksi', [TransaksiController::class, 'index'])->name('admin.transaksi');
+    Route::get('/laporan', [LaporanController::class, 'index'])->name('admin.laporan');
+});
+
+
+// //Route Group
+// Route::group(['prefix' => '/mahasiswa', 'as' => 'mahasiswa'],function() {
+//     Route::get('/pendaftaran', function () {
 //         $title = 'Pendaftaran';
 //         $text = 'Halaman Pendaftaran';
 
@@ -63,4 +77,8 @@ Route::get('/admin', [DashboardController::class, 'index']);
 //         return view('mahasiswa.index', compact('title', 'text'));
 //     });
 
+// });
+
+// Route::get('/', function () {
+//     return view('welcome');
 // });
