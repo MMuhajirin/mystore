@@ -8,6 +8,7 @@ use App\Http\Controllers\LatihanController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,15 @@ Route::group(['prefix' => '/admin'], function (){
         Route::group(['prefix' => '/kategori'], function (){
             Route::get('/', [KategoriController::class, 'index'])->name('kategori.index');
             Route::get('/create', [KategoriController::class, 'create'])->name('create.kategori');
+            Route::get('/edit', [KategoriController::class, 'edit'])->name('edit.kategori');
+
+        });
+        //Route::group parent produk
+        Route::group(['prefix' => '/produk'], function (){
+            Route::get('/', [ProdukController::class, 'index'])->name('produk.index');
+            Route::get('/create', [ProdukController::class, 'create'])->name('create.produk');
+            Route::get('/show', [ProdukController::class, 'show'])->name('show.produk');
+            Route::get('/edit', [ProdukController::class, 'edit'])->name('edit.produk');
 
         });
 

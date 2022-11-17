@@ -1,26 +1,105 @@
-<body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
-        <!-- Sidebar Toggle-->
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-        <!-- Navbar Search-->
-        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-            <div class="input-group">
-                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-            </div>
-        </form>
-        <!-- Navbar-->
-        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+<nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview"
+    role="menu" data-accordion="false">
+    <!-- Add icons to the links using the .nav-icon class
+    with font-awesome or any other icon font library -->
+    <li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-th"></i>
+<p>
+Dashboard
+</p>
+</a>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-folder-open"></i>
+<p>
+Produk
+<i class="right fas fa-angle-left"></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="{{ route('produk.index') }}" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Produk</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="{{ route('kategori.index') }}" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Kategori</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-shopping-cart"></i>
+<p>
+Transaksi
+<i class="right fas fa-angle-left"></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="{{ route('transaksi.index') }}" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Data Transaksi</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-folder"></i>
+<p>
+Data
+<i class="right fas fa-angle-left"></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="{{ route('customer.index') }}" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Customer</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-list"></i>
+<p>
+Laporan
+<i class="right fas fa-angle-left"></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="{{ URL::to('admin/laporan') }}" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Penjualan</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="{{ URL::to('admin/profil') }}" class="nav-link">
+<i class="nav-icon fas fa-users"></i>
+<p>
+Profil
+</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-sign-out-alt"></i>
+<p>
+Sign Out
+</p>
+</a>
+</li>
+</ul>
+</nav>
