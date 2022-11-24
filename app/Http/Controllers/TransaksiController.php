@@ -16,4 +16,26 @@ class TransaksiController extends Controller
         $data = array('tittle' => 'Transaksi');
         return view('transaksi.create', $data);
     }
+    public function store(Request $request)
+    {
+        //
+    }
+    public function show()
+    {
+        $data = array('tittle' => 'Detail Transaksi');
+        return view('transaksi.show', $data);
+    }
+    public function edit()
+    {
+        $data = array('tittle' => 'Form Edit Transaksi');
+        return view('transaksi.edit', $data);
+    }
+    public function update(Request $request, $id)
+    {
+        //
+    }
+    public function destroy($id)
+    {
+        //
+    }
 }

@@ -61,11 +61,11 @@ control" placeholder="ketik keyword disini">
     <td>Baju Anak</td>
     <td>12 Produk</td>
     <td>
-    <a href="{{ route('produk.show', 2) }}" class="btn btn-sm
+    <a href="{{ route('show.produk', 2) }}" class="btn btn-sm
     btn-primary mr-2 mb-2">
     <button class="btn btn-sm btn-primary">Detail</button>
 </a>
-<a href="{{ route('produk.edit', 2) }}" class="btn btn-sm
+<a href="{{ route('edit.produk', 2) }}" class="btn btn-sm
 btn-primary mr-2 mb-2">
 <button class="btn btn-sm btn-primary">Edit</button>
 </a>
@@ -92,11 +92,11 @@ width='150px'>
 <td>Baju Wanita</td>
 <td>20 Produk</td>
 <td>
-<a href="{{ route('produk.show', 2) }}" class="btn btn-sm
+<a href="{{ route('show.produk', 2) }}" class="btn btn-sm
 btn-primary mr-2 mb-2">
 <button class="btn btn-sm btn-primary">Detail</button>
 </a>
-<a href="{{ route('produk.edit', 2) }}" class="btn btn-sm
+<a href="{{ route('edit.produk', 2) }}" class="btn btn-sm
 btn-primary mr-2 mb-2">
 <button class="btn btn-sm btn-primary">Edit</button>
 </a>
@@ -123,11 +123,11 @@ Hapus
     <td>Baju Wanita</td>
     <td>20 Produk</td>
     <td>
-    <a href="{{ route('produk.show', 2) }}" class="btn btn-sm
+    <a href="{{ route('show.produk', 2) }}" class="btn btn-sm
     btn-primary mr-2 mb-2">
     <button class="btn btn-sm btn-primary">Detail</button>
     </a>
-    <a href="{{ route('produk.edit', 2) }}" class="btn btn-sm
+    <a href="{{ route('edit.produk', 2) }}" class="btn btn-sm
     btn-primary mr-2 mb-2">
     <button class="btn btn-sm btn-primary">Edit</button>
     </a>
